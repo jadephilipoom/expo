@@ -334,6 +334,20 @@ cc_library(
 )
 
 cc_library(
+    name = "mlkem",
+    srcs = ["mlkem.c"],
+    hdrs = [
+        "//sw/device/lib/crypto/include:mlkem.h",
+    ],
+    target_compatible_with = [OPENTITAN_CPU],
+    deps = [
+        ":status",
+        "//sw/device/lib/crypto/impl/mlkem:mlkem_native",
+        "//sw/device/lib/crypto/include:datatypes",
+    ],
+)
+
+cc_library(
     name = "x25519",
     srcs = ["x25519.c"],
     hdrs = ["//sw/device/lib/crypto/include:x25519.h"],

@@ -573,6 +573,35 @@
         ]
       }
     },
+    "//third_party/mlkem_native:extensions.bzl%mlkem_native": {
+      "general": {
+        "bzlTransitiveDigest": "ZDpNCzUo2ytPiog3F606mn4PUAIT8x4uX/9rADS2nf0=",
+        "usagesDigest": "KZSGPISlfIjrxhqIuSolXDgPDQcSgVpq4InLcQeOBrg=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "mlkem_native": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "build_file": "@@//third_party/mlkem_native:BUILD.mlkem_native.bazel",
+              "sha256": "2b1cb3891435452d8f09b047276970cc5bedee4acc1447ec499f2e4beef8e592",
+              "strip_prefix": "mlkem-native-206f8edbec21bc25a2e222be19cfc89f847422f5",
+              "urls": [
+                "https://github.com/pq-code-package/mlkem-native/archive/206f8edbec21bc25a2e222be19cfc89f847422f5.tar.gz"
+              ]
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "",
+            "bazel_tools",
+            "bazel_tools"
+          ]
+        ]
+      }
+    },
     "//third_party/nist_cavp_testvectors:extensions.bzl%nist_cavp": {
       "general": {
         "bzlTransitiveDigest": "gk5tWGGBwcXz9ES4XfiLFLRdL4BUlApptTMVbsfhkKw=",
