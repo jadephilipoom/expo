@@ -77,6 +77,14 @@ licence_test(
         "hw/ip/aes/pre_sca/alma/cpp/verilator_tb_aes_sbox.cpp",
         "hw/ip/aes/pre_sca/alma/cpp/verilator_tb_aes_sub_bytes.cpp",
         "hw/ip/kmac/pre_sca/alma/cpp/verilator_tb_keccak_2share.cpp",
+        # Code contributed by mlkem-native authors
+        "sw/device/lib/crypto/include/mlkem.h",
+        "sw/device/lib/crypto/impl/mlkem/mlkem_native_monobuild.c",
+        "sw/device/lib/crypto/impl/mlkem/mlkem_native_monobuild.h",
+        "sw/device/lib/crypto/impl/mlkem/fips202_glue.h",
+        "sw/device/lib/crypto/impl/mlkem/fips202x4_glue.h",
+        "sw/device/lib/crypto/impl/mlkem/config.h",
+        "sw/device/tests/crypto/mlkem_functest.c",
     ],
     licence = """
     Copyright lowRISC contributors (OpenTitan project).
