@@ -147,17 +147,19 @@ typedef struct otcrypto_const_word32_buf {
  */
 typedef enum otcrypto_key_type {
   // Key type AES.
-  kOtcryptoKeyTypeAes = 0x8e9,
+  kOtcryptoKeyTypeAes = 0x25b,
   // Key type HMAC.
-  kOtcryptoKeyTypeHmac = 0xe3f,
+  kOtcryptoKeyTypeHmac = 0x6ee,
   // Key type KMAC.
-  kOtcryptoKeyTypeKmac = 0xb74,
+  kOtcryptoKeyTypeKmac = 0x5dd,
   // Key type RSA.
-  kOtcryptoKeyTypeRsa = 0x7ee,
+  kOtcryptoKeyTypeRsa = 0x527,
   // Key type ECC.
-  kOtcryptoKeyTypeEcc = 0x15b,
+  kOtcryptoKeyTypeEcc = 0x738,
   // Key type KDF.
-  kOtcryptoKeyTypeKdf = 0xb87,
+  kOtcryptoKeyTypeKdf = 0x3e1,
+  // Key type ML-KEM.
+  kOtcryptoKeyTypeMlkem = 0x396,
 } otcrypto_key_type_t;
 
 /**
@@ -275,6 +277,23 @@ typedef enum otcrypto_kdf_key_mode {
 } otcrypto_kdf_key_mode_t;
 
 /**
+ * Enum to specify ML-KEM key modes.
+ *
+ * This will be used in the `otcrypto_key_mode_t` struct to indicate the mode
+ * for which the provided key is intended for.
+ *
+ * Values are hardened.
+ */
+typedef enum otcrypto_mlkem_key_mode {
+  // Mode ML-KEM-512.
+  kOtcryptoMlkemKeyMode512 = 0x36c,
+  // Mode ML-KEM-768.
+  kOtcryptoMlkemKeyMode768 = 0x7b9,
+  // Mode ML-KEM-1024.
+  kOtcryptoMlkemKeyMode1024 = 0x696,
+} otcrypto_mlkem_key_mode_t;
+
+/**
  * Enum for opentitan crypto modes that use a key.
  *
  * Denotes the crypto mode for which the provided key is to be used.
@@ -349,6 +368,15 @@ typedef enum otcrypto_key_mode {
   // Key is intended for KDF with KMAC256 as PRF.
   kOtcryptoKeyModeKdfKmac256 =
       kOtcryptoKeyTypeKdf << 16 | kOtcryptoKdfKeyModeKmac256,
+  // Key is intended for ML-KEM-512.
+  kOtcryptoKeyModeMlkem512 =
+      kOtcryptoKeyTypeMlkem << 16 | kOtcryptoMlkemKeyMode512,
+  // Key is intended for ML-KEM-768.
+  kOtcryptoKeyModeMlkem768 =
+      kOtcryptoKeyTypeMlkem << 16 | kOtcryptoMlkemKeyMode768,
+  // Key is intended for ML-KEM-1024.
+  kOtcryptoKeyModeMlkem1024 =
+      kOtcryptoKeyTypeMlkem << 16 | kOtcryptoMlkemKeyMode1024,
 } otcrypto_key_mode_t;
 
 /**

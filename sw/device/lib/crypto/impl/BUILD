@@ -342,6 +342,8 @@ cc_library(
     target_compatible_with = [OPENTITAN_CPU],
     deps = [
         ":status",
+        "//sw/device/lib/crypto/impl:integrity",
+        "//sw/device/lib/crypto/impl:keyblob",
         "//sw/device/lib/crypto/impl/mlkem:mlkem_native",
         "//sw/device/lib/crypto/include:datatypes",
     ],

@@ -175,6 +175,10 @@ status_t keyblob_ensure_xor_masked(const otcrypto_key_config_t config) {
       HARDENED_CHECK_EQ(config.key_mode >> 16, kOtcryptoKeyTypeKdf);
       result ^= launder32(kOtcryptoKeyTypeKdf);
       break;
+    case kOtcryptoKeyTypeMlkem:
+      HARDENED_CHECK_EQ(config.key_mode >> 16, kOtcryptoKeyTypeMlkem);
+      result ^= launder32(kOtcryptoKeyTypeMlkem);
+      break;
     case kOtcryptoKeyTypeEcc:
       // Asymmetric!
       return OTCRYPTO_BAD_ARGS;
