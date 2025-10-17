@@ -3,8 +3,8 @@
 // Licensed under the Apache License, Version 2.0, see LICENSE for details.
 // SPDX-License-Identifier: Apache-2.0
 
-#if !defined(MLK_ALL_H)
-#define MLK_ALL_H
+#ifndef OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_MLKEM_NATIVE_MONOBUILD_H_
+#define OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_MLKEM_NATIVE_MONOBUILD_H_
 
 #define MLK_CONFIG_API_NO_SUPERCOP
 
@@ -33,4 +33,4 @@
 #undef MLK_CONFIG_API_NO_SUPERCOP
 #undef MLK_H
 
-#endif /* !MLK_ALL_H */
+#endif  // OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_MLKEM_NATIVE_MONOBUILD_H_

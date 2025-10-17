@@ -3,8 +3,8 @@
 // Licensed under the Apache License, Version 2.0, see LICENSE for details.
 // SPDX-License-Identifier: Apache-2.0
 
-#ifndef MLK_CONFIG_H
-#define MLK_CONFIG_H
+#ifndef OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_CONFIG_H_
+#define OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_CONFIG_H_
 
 /******************************************************************************
  * Name:        MLK_CONFIG_NAMESPACE_PREFIX
@@ -102,4 +102,4 @@
  *****************************************************************************/
 #define MLK_CONFIG_SERIAL_FIPS202_ONLY
 
-#endif /* !MLK_CONFIG_H */
+#endif  // OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_CONFIG_H_

@@ -1,9 +1,7 @@
-/*
- * Copyright (c) The mlkem-native project authors
- * SPDX-License-Identifier: Apache-2.0 OR ISC OR MIT
- */
-#ifndef MLK_FIPS202_FIPS202X4_H
-#define MLK_FIPS202_FIPS202X4_H
+// Copyright (c) The mlkem-native project authors
+// SPDX-License-Identifier: Apache-2.0 OR ISC OR MIT
+#ifndef OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_FIPS202X4_GLUE_H_
+#define OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_FIPS202X4_GLUE_H_
 
 #include "fips202_glue.h"
 #include "mlkem/src/common.h"
@@ -19,4 +17,4 @@ static MLK_INLINE void mlk_shake256x4(uint8_t *out0, uint8_t *out1,
   mlk_shake256(out3, outlen, in3, inlen);
 }
 
-#endif /* MLK_FIPS202_FIPS202X4_H */
+#endif  // OPENTITAN_SW_DEVICE_LIB_CRYPTO_IMPL_MLKEM_FIPS202X4_GLUE_H_
