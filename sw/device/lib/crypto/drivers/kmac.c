@@ -778,12 +778,12 @@ status_t kmac_squeeze_end(size_t digest_wordlen, hardened_bool_t read_masked,
   return OTCRYPTO_OK;
 }
 
-status_t kmac_shake128_start(void) {
+status_t kmac_shake128_begin(void) {
   return start(kKmacOperationShake, kKmacSecurityStrength128,
                /*hw_backed=*/kHardenedBoolFalse);
 }
 
-status_t kmac_shake256_start(void) {
+status_t kmac_shake256_begin(void) {
   return start(kKmacOperationShake, kKmacSecurityStrength256,
                /*hw_backed=*/kHardenedBoolFalse);
 }

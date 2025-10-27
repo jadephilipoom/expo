@@ -93,7 +93,7 @@ status_t kmac_hwip_default_configure(void);
  * @return Error code.
  */
 OT_WARN_UNUSED_RESULT
-status_t kmac_shake128_start(void);
+status_t kmac_shake128_begin(void);
 
 /**
  * Start a SHAKE-256 operation.
@@ -106,7 +106,7 @@ status_t kmac_shake128_start(void);
  * @return Error code.
  */
 OT_WARN_UNUSED_RESULT
-status_t kmac_shake256_start(void);
+status_t kmac_shake256_begin(void);
 
 /**
  * Absorb a message for an ongoing operation.

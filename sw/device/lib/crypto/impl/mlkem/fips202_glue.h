@@ -20,7 +20,7 @@ static MLK_INLINE void mlk_shake128_absorb_once(mlk_shake128ctx *state,
                                                 const uint8_t *input,
                                                 size_t inlen) {
   (void)state;
-  kmac_shake128_start();
+  kmac_shake128_begin();
   kmac_absorb(input, inlen);
   kmac_process();
 }
